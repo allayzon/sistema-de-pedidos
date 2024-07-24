@@ -19,4 +19,10 @@ public class Pedido {
         this.numeroPedido = numeroPedido;
         this.statusPedido = statusPedido;
     }
+
+    public String getIdPedido() { return idPedido; }
+
+    public int getNumeroPedido() { return numeroPedido; }
+
+    public PedidoStatus getStatusPedido() { return statusPedido; }
 }
