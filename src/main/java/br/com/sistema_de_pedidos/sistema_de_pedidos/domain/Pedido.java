@@ -3,26 +3,23 @@ package br.com.sistema_de_pedidos.sistema_de_pedidos.domain;
 public class Pedido {
 
     private String idPedido;
-    private int numeroPedido;
     private PedidoStatus statusPedido;
 
     public Pedido() {
     }
 
-    public Pedido(String idPedido, int numeroPedido, PedidoStatus statusPedido) {
+    public Pedido(String idPedido, PedidoStatus statusPedido) {
         this.idPedido = idPedido;
-        this.numeroPedido = numeroPedido;
         this.statusPedido = statusPedido;
     }
 
-    public Pedido(int numeroPedido, PedidoStatus statusPedido) {
-        this.numeroPedido = numeroPedido;
+    public Pedido(PedidoStatus statusPedido) {
         this.statusPedido = statusPedido;
     }
 
     public String getIdPedido() { return idPedido; }
 
-    public int getNumeroPedido() { return numeroPedido; }
-
     public PedidoStatus getStatusPedido() { return statusPedido; }
+
+    public void setStatusPedido(PedidoStatus pedidoStatus) { this.statusPedido = pedidoStatus; }
 }

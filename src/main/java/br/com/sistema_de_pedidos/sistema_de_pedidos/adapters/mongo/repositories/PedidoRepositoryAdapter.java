@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @Component
 public class PedidoRepositoryAdapter implements PedidoRepositoryPort {
+
     private final PedidoRepository pedidoRepository;
 
     public PedidoRepositoryAdapter(PedidoRepository pedidoRepository) {
@@ -16,8 +17,8 @@ public class PedidoRepositoryAdapter implements PedidoRepositoryPort {
     }
 
     @Override
-    public void save(Pedido pedido) {
-        pedidoRepository.save(pedido);
+    public Pedido save(Pedido pedido) {
+        return pedidoRepository.save(pedido);
     }
 
     @Override
