@@ -5,6 +5,7 @@ import br.com.sistema_de_pedidos.sistema_de_pedidos.domain.Pedido;
 import br.com.sistema_de_pedidos.sistema_de_pedidos.ports.PedidoRepositoryPort;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.Executable;
 import java.util.Optional;
 
 @Component
@@ -18,7 +19,10 @@ public class PedidoRepositoryAdapter implements PedidoRepositoryPort {
 
     @Override
     public Pedido save(Pedido pedido) {
-        return pedidoRepository.save(pedido);
+        Pedido pedidoBanco = pedidoRepository.save(pedido);
+        System.out.println("Pedido salvo: " + pedidoBanco);
+        return pedidoBanco;
+
     }
 
     @Override
